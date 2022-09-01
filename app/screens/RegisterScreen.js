@@ -54,6 +54,7 @@ createUserWithEmailAndPassword(auth, email, password)
 
   }
   return (
+    
     <Screen style={styles.container}>
       
     <Image
@@ -61,9 +62,8 @@ createUserWithEmailAndPassword(auth, email, password)
         source={require('../assets/background.png')}
     />
 
-      <ScrollView>
-        
-      
+ <ScrollView>      
+     
 <AppForm
         initialValues={{ name:'' ,email : '' , password :'' }}
         onSubmit={handleSubmit}
@@ -72,13 +72,13 @@ createUserWithEmailAndPassword(auth, email, password)
           
   
          <AppFormField
-          autoCorrect={false}
-        icon="account"
-        name="name"
-        placeholder="Name"
+         autoCorrect={false}
+         icon="account"
+         name="name"
+         placeholder="Name"
                 />
          <AppFormField
-         autoCorrect={false}
+          autoCorrect={false}
           name = "email"
           icon="email"
           KeyboardType="email-address"     

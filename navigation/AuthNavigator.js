@@ -14,8 +14,13 @@ const AuthNavigator = () => (
       component={WelcomeScreen}
       options={{ headerShown: false }}
     />
-    <Stack.Screen name={routes.LOGIN} component={LoginScreen} />
-    <Stack.Screen name={routes.REGISTER} component={RegisterScreen} />
+    <Stack.Screen name={routes.LOGIN} 
+    component={LoginScreen} />
+    <Stack.Screen 
+    name={routes.REGISTER} 
+    component={RegisterScreen} 
+      
+    />
   </Stack.Navigator>
 );
 

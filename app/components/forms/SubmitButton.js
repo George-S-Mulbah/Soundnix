@@ -10,7 +10,12 @@ function SubmitButton({ title }) {
         handleSubmit
       } = useFormikContext();
   return (
-    <AppButton title={title} elevation={10} color="black" textColor="primary" onPress={handleSubmit}/>
+    <AppButton 
+    title={title} 
+    elevation={10} 
+    color="black" 
+    textColor="primary" 
+    onPress={handleSubmit}/>
 
     );
 }
