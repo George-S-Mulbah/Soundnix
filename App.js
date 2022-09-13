@@ -15,6 +15,7 @@ import AppTextInput from './app/components/AppTextInput';
 import Screen from './app/components/Screen';
 import RegisterScreen from './app/screens/RegisterScreen';
 import AuthNavigator from './navigation/AuthNavigator';
+import ActivityIndicator from './app/components/ActivityIndicator';
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -51,6 +52,14 @@ export default function App() {
           </Stack.Navigator>
         </NavigationContainer>
       )
+
+      // <Screen>
+      //   <ActivityIndicator
+      //     visible ={true}
+      //   />
+      // </Screen>
+
+      // <RegisterScreen />
     );
   }
   

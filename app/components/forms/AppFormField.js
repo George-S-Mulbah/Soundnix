@@ -10,9 +10,10 @@ function AppFormField({ name , ...otherProps }) {
   
   const {
     setFieldTouched,
-    handleChange ,
+  setFieldValue,
     errors,
     touched,
+    values,
   } = useFormikContext();
   return (
    
@@ -20,8 +21,10 @@ function AppFormField({ name , ...otherProps }) {
     
       <AppTextInput
         onBlur={() => setFieldTouched(name)}
-        onChangeText={handleChange(name)}
+        onChangeText={text =>setFieldValue(name,text)}
+        value = {values[name]}
               {...otherProps}
+
                       />
         <ErrorMessage error={errors[name]} touch={touched[name]} />
         

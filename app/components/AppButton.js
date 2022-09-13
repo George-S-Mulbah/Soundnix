@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet ,TouchableOpacity ,Text} from 'react-native';
 import colors from '../config/colors';
-function AppButton({ title, onPress, color = "primary" , textColor ,borderColor,elevation=0}) {
+function AppButton({ title, onPress, color = "primary" , textColor ,borderColor,elevation=0,disable}) {
     return (
       <TouchableOpacity
         style={[styles.button, {
@@ -10,6 +10,7 @@ function AppButton({ title, onPress, color = "primary" , textColor ,borderColor,
           borderWidth: 1,
           elevation:elevation,
         }]}
+        disabled={disable}
         onPress={onPress} >
         <Text style={[styles.text],{color:colors[textColor],fontFamily:'Chewy_400Regular'}}>{title}</Text>
       </TouchableOpacity>

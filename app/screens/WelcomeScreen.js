@@ -23,7 +23,12 @@ function WelcomeScreen({navigation}) {
           />
       
       <View style={styles.buttonsContainer}>
-        <AppButton title="Login" color="black" textColor="primary"  onPress={()=>navigation.navigate(routes.REGISTER)}/>
+        <AppButton title="Login" 
+        color="black" 
+        textColor="primary" 
+        onPress={()=>navigation.navigate(routes.REGISTER)}
+        elevation={10}
+         />
         <AppButton title="Register" color="transparent" textColor="black" borderColor="black" onPress={()=>navigation.navigate(routes.REGISTER)}/>
       </View>
       </Screen>
@@ -42,13 +47,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttonsContainer: {
-    top:200,
+    top:50,
     padding: 20,
     width: "100%",
   },
     logo: {
-      width: 250,
-      height: 250,
+      width: 300,
+      height: 300,
       alignSelf: 'center',
       marginTop: 50,
       marginBottom:20,

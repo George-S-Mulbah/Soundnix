@@ -4,7 +4,7 @@ import {useFormikContext} from 'formik'
 import AppButton from '../AppButton';
 
 
-function SubmitButton({ title }) {
+function SubmitButton({ title ,disable}) {
     
     const {
         handleSubmit
@@ -15,8 +15,9 @@ function SubmitButton({ title }) {
     elevation={10} 
     color="black" 
     textColor="primary" 
+    disable={disable}
     onPress={handleSubmit}/>
-
+    
     );
 }
 
