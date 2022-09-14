@@ -135,9 +135,9 @@ createUserWithEmailAndPassword(auth, email, password)
           name="password"
           autoCapitalize="none"
           icon="lock"
+          pass="eye"
           KeyboardType="email-address"
           placeholder="Password"
-          secureTextEntry
           textContentType="password"
                  />
                 
