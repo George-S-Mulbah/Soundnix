@@ -5,7 +5,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import defaultStyles from "../config/styles"
 function AppTextInput({ icon,width="100%",pass,padding ,...otherProps }) {
 
-  const [eyes,setEyes] = useState(false);
+  const [eyes,setEyes] = useState(true);
   return (
     
     <View style={[styles.container, { width },{padding}]}>
