@@ -29,7 +29,7 @@ function WelcomeScreen({navigation}) {
         onPress={()=>navigation.navigate(routes.REGISTER)}
         elevation={10}
          />
-        <AppButton title="Register" color="transparent" textColor="black" borderColor="black" onPress={()=>navigation.navigate(routes.REGISTER)}/>
+        <AppButton title="Register" color="transparent" textColor="black" borderColor="black" onPress={()=>navigation.navigate(routes.LOGIN)}/>
       </View>
       </Screen>
 
