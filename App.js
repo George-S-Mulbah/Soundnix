@@ -16,6 +16,7 @@ import Screen from './app/components/Screen';
 import RegisterScreen from './app/screens/RegisterScreen';
 import AuthNavigator from './navigation/AuthNavigator';
 import ActivityIndicator from './app/components/ActivityIndicator';
+import AppNavigator from './navigation/AppNavigator';
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -42,16 +43,18 @@ export default function App() {
     return null;
   } else {
     return (
-      // isAppFirstLaunched != null && (
-      //   <NavigationContainer>
-      //     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      //       {isAppFirstLaunched && (
-      //         <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
-      //       )}
-      //       <Stack.Screen name="WelcomeScreen" component={AuthNavigator} />
-      //     </Stack.Navigator>
-      //   </NavigationContainer>
-      // )
+      isAppFirstLaunched != null && (
+        <NavigationContainer>
+          {/* <Stack.Navigator screenOptions={{ headerShown: false }}>
+            {isAppFirstLaunched && (
+              <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
+            )}
+            <Stack.Screen name="WelcomeScreen" component={AuthNavigator} />
+          </Stack.Navigator> */}
+          <AppNavigator />
+          
+        </NavigationContainer>
+      )
 
       // <Screen>
       //   <ActivityIndicator
@@ -59,7 +62,7 @@ export default function App() {
       //   />
       // </Screen>
 
-      <LoginScreen/>
+      // <LoginScreen/>
     );
   }
   
