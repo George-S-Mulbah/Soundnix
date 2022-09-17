@@ -1,5 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from "../app/components/Icon";
+import colors from "../app/config/colors";
 import AccountScreen from "../app/screens/AccountScreen";
 import HomeScreen from "../app/screens/HomeScreen";
 import LibraryScreen from '../app/screens/LibraryScreen';
@@ -14,12 +15,26 @@ const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => (
 
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={{
+            headerStyle:{
+                  backgroundColor: colors.primary,
+            },
+
+            tabBarActiveTintColor: colors.dark,
+            tabBarStyle:{
+                  height:60,
+                  padding:20,
+                  backgroundColor:colors.primary,
+                 
+            }
+        }}
+      >
             <Tab.Screen name="Home"   
              component={HomeScreen} 
              options = {{
                   tabBarIcon:({color,size}) =>
-                  <Icon name="home" size={size}/>
+                  <Icon name="home" size={size} />
             }}
 
             />
@@ -45,6 +60,7 @@ const AppNavigator = () => (
                   <Icon name="account" size={size}/>
             }}
             />
+
       </Tab.Navigator>
 )
 
