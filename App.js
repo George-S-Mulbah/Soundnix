@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { AsyncStorage, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import OnboardingScreen from './app/screens/OnboardingScreen';

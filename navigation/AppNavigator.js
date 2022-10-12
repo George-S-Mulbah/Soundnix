@@ -7,10 +7,9 @@ import LibraryScreen from '../app/screens/LibraryScreen';
 import SearchScreen from './../app/screens/SearchScreen';
 
 
-
-
-
 const Tab = createBottomTabNavigator();
+
+const IconSize = { size :30}
 
 
 const AppNavigator = () => (
@@ -20,12 +19,14 @@ const AppNavigator = () => (
             headerStyle:{
                   backgroundColor: colors.primary,
             },
+            headerTitleAlign: 'center',
 
             tabBarActiveTintColor: colors.dark,
             tabBarStyle:{
                   height:60,
-                  padding:20,
+                  padding:10,
                   backgroundColor:colors.primary,
+                  textSize:20,
                  
             }
         }}
@@ -33,36 +34,36 @@ const AppNavigator = () => (
             <Tab.Screen name="Home"   
              component={HomeScreen} 
              options = {{
-                  tabBarIcon:({color,size}) =>
-                  <Icon name="home" size={size} />
+                  tabBarIcon:({}) =>
+                  <Icon name="home" size={IconSize.size}  iconColor={colors.white}/>
             }}
 
             />
             <Tab.Screen name="Search" 
              component={SearchScreen}
              options = {{
-                  tabBarIcon:({color,size}) =>
-                  <Icon name="magnify" size={size}/>
+                  tabBarIcon:({color}) =>
+                  <Icon name="magnify" size={IconSize.size} iconColor={colors.white}/>
             }}
                  
             />
             <Tab.Screen name="Library"   
               component={LibraryScreen} 
               options = {{
-                  tabBarIcon:({color,size}) =>
-                  <Icon name="music-box-multiple" size={size}/>
+                  tabBarIcon:({color}) =>
+                  <Icon name="music-box-multiple" size={IconSize.size} iconColor={colors.white}/>
             }}
             />
             <Tab.Screen name="Account"   
              component={AccountScreen} 
              options = {{
-                  tabBarIcon:({color,size}) =>
-                  <Icon name="account" size={size}/>
+                  tabBarIcon:({color}) =>
+                  <Icon name="account" size={IconSize.size} iconColor={colors.white}/>
             }}
             />
 
+
       </Tab.Navigator>
 )
-
 
 export default AppNavigator;

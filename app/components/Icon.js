@@ -8,6 +8,7 @@ function Icon({
     size=40,
     backgroundColor="#000",
     iconColor = "#fff",
+    elev =1,
 }) {
   return (
     <View style={{width: size,
@@ -15,9 +16,18 @@ function Icon({
         borderRadius: size / 2,
         backgroundColor,
         justifyContent: 'center',
-          alignItems: 'center'
+          alignItems: 'center',
+        
+          shadowColor: "#000",
+          shadowOffset: {
+            width: 0,
+            height: 2,
+          },
+          shadowOpacity: 0.34,
+          shadowRadius: 6.27,
+          elevation:elev,
       }}>
-      <MaterialCommunityIcons name={name} size={size*0.5}  color={iconColor} />   
+      <MaterialCommunityIcons name={name} size={size*0.5}  color={iconColor}  />   
       </View>
   );
 }
