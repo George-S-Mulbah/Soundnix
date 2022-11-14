@@ -27,23 +27,11 @@ export default function App() {
 
   const [isAppFirstLaunched, setIsAppFirstLaunched] = useState(null);
 
-  useEffect(async() => {
-    const appData = await AyncStorage.getItem("isAppFirstLaunched");
-    console.log(appData);
-    if (appData == null) {
-      setIsAppFirstLaunched(true);
-      AyncStorage.setItem('isAppFirsLaunched','false')
-    } else {
-      setIsAppFirstLaunched(false);
-    }
-    },[])
+ 
 
-
-  if (!fontsLoaded) {
-    return null;
-  } else {
+ 
     return (
-      isAppFirstLaunched != null && (
+      
         <NavigationContainer>
           {/* <Stack.Navigator screenOptions={{ headerShown: false }}>
             {isAppFirstLaunched && (
@@ -54,7 +42,7 @@ export default function App() {
           <AppNavigator />
           
         </NavigationContainer>
-      )
+      
 
       // <Screen>
       //   <ActivityIndicator
@@ -70,7 +58,7 @@ export default function App() {
  
     
   
-}
+
 
 const styles = StyleSheet.create({
   container: {
