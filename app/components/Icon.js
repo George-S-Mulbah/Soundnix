@@ -9,12 +9,16 @@ function Icon({
     backgroundColor="#000",
     iconColor = "#fff",
     elev =1,
+    marginTop,
+    marginLeft,
 }) {
   return (
     <View style={{width: size,
         height: size,
         borderRadius: size / 2,
         backgroundColor,
+        marginTop,
+        marginLeft,
         justifyContent: 'center',
           alignItems: 'center',
         
