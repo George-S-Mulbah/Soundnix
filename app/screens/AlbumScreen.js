@@ -1,7 +1,8 @@
 import { 
     View, 
     Text,
-    StyleSheet 
+    StyleSheet, 
+    FlatList
 } from 'react-native'
 import React, { useEffect } from 'react'
 import Screen from '../components/Screen'
@@ -59,7 +60,7 @@ const album ={
     title: 'Post Malone, Hellow, Eminem',
     artist:'50 cents',
     numberOfLike:23,
-    status: 'free',
+    status: 'FREE',
     price: `$0`,
   }
 ],
@@ -72,7 +73,11 @@ const album ={
     })
   return (
     <Screen>
-      <SongListItems  data={album.songs[0]}/>
+      {/* <SongListItems  data={album.songs[0]}/> */}
+      <FlatList 
+       data={album.songs}
+       renderItem={({item}) => <SongListItems data={item}/>}
+      />
     </Screen>
 
   )

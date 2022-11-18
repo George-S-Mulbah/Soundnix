@@ -6,6 +6,7 @@ import Icon from './Icon'
 
 
 
+
  
  function SongListItems({data}) {
 
@@ -28,10 +29,10 @@ import Icon from './Icon'
            <Text style={styles.status}>{data.status}</Text>
         </View>
         <View  style={styles.thirdContainer}>
-        <Icon name="play_arrow" backgroundColor={colors.dark} marginTop={-10}/> 
+        <Icon m={false}  name="caretright" size={35} backgroundColor={colors.dark} iconColor={colors.white} />
         </View>
         <View style={styles.lastContainer}>
-       <Icon name="dots-vertical" backgroundColor={colors.dark} />  
+       <Icon name="dots-vertical" backgroundColor={colors.dark} size={50} />  
         </View>
         </>
     </View>
@@ -72,7 +73,8 @@ const styles = StyleSheet.create({
   marginTop:-12
 },
 lastContainer:{
-   marginLeft:25, 
+   marginLeft:-10, 
+   marginTop:3,
 },
 firstContainer:{
     width:'36%',
@@ -95,7 +97,8 @@ firstContainer:{
    },
    thirdContainer:{
     justifyContent:"center",
-    alignItems:"center"
+    alignItems:"center",
+    marginLeft:0,
    }
 
 

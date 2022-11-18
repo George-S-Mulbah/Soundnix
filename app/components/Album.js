@@ -7,10 +7,11 @@ import { useNavigation } from '@react-navigation/native'
 
  
  function Album({albumData}) {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
   
    const onPress = () => {
-    navigation.navigate('AlbumScreen',{id:albumData.id});
+     navigation.navigate('AlbumScreen',{id:albumData.id});
+    //console.log(albumData.id);
    }
  
   return (

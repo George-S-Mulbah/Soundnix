@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { MaterialCommunityIcons,FontAwesome } from '@expo/vector-icons';
 import colors from '../config/colors';
-
+import { AntDesign } from '@expo/vector-icons';
 function Icon({
     name,
     size=40,
@@ -11,6 +11,7 @@ function Icon({
     elev =1,
     marginTop,
     marginLeft,
+    m=true
 }) {
   return (
     <View style={{width: size,
@@ -30,8 +31,14 @@ function Icon({
           shadowOpacity: 0.34,
           shadowRadius: 6.27,
           elevation:elev,
-      }}>
-      <MaterialCommunityIcons name={name} size={size*0.5}  color={iconColor}  />   
+      }}>     
+        {m
+        
+        ?
+        <MaterialCommunityIcons name={name} size={size*0.5}  color={iconColor}  />    
+        :
+        <AntDesign name={name} size={size * 0.5} color={iconColor} />
+        }
       </View>
   );
 }
