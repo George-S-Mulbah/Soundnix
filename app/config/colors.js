@@ -7,6 +7,7 @@ export default {
     light: "#e0e0e0",
     danger: "#ff5252",
     dark: "#0c0c0c",
-  green: "#286e0a"
+  green: "#286e0a",
+  brandColor:"#f2fd46",
     
   };

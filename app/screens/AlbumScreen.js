@@ -8,14 +8,17 @@ import React, { useEffect } from 'react'
 import Screen from '../components/Screen'
 import { useRoute } from '@react-navigation/native'
 import SongListItems from '../components/SongListItems'
+import AlbumHeader from '../components/AlbumHeader'
 
 export default function AlbumScreen() {
 
 const album ={
   id : '11',
   name:'Good Vibe',
-  by : 'Spotify',
+  creator : 'Cool-Kid',
   numberOfLikes:38,
+  status:"FREE",
+  price : "$0",
   imageUri: 'https://cache.boston.com/resize/bonzai-fba/Globe_Photo/2011/04/14/1302796985_4480/539w.jpg',
   artistHeadline:'Taylor Swift, Kygo Objective C, Avicii',
   songs:[{
@@ -77,6 +80,7 @@ const album ={
       <FlatList 
        data={album.songs}
        renderItem={({item}) => <SongListItems data={item}/>}
+       ListHeaderComponent ={()=> <AlbumHeader data={album}/>}
       />
     </Screen>
 
