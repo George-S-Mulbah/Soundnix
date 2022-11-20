@@ -2,20 +2,19 @@ import { StyleSheet, Text, TouchableOpacity, View ,Image, ImageBackground} from 
 import React from 'react'
 import colors from '../config/colors';
 
-const data = {
-    genreName:'Hip-pop'
-}
 
- function AlbumGenre({data}) {
+
+ function AlbumGenre({songGenre}) {
+    
   return (
     <TouchableOpacity>
         <View style={styles.container}>
 
-      <ImageBackground source={require('../assets/genre/Hip-pop.png')} resizeMode="cover" 
+      <ImageBackground source={{uri:songGenre.imageUri}} resizeMode="cover" 
       style={styles.image}
       imageStyle={{borderRadius:6,opacity:0.6}}
       >
-      <Text style={styles.genreName}>{data.genreName}</Text>
+      <Text style={styles.genreName}>{songGenre.name}</Text>
       <View></View>
       </ImageBackground>
         </View>
@@ -29,7 +28,8 @@ export default AlbumGenre;
 const styles = StyleSheet.create({
  container:{
     width:150,
-    height:100,  
+    height:100, 
+    marginLeft:10, 
    
  },
      

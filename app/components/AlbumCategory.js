@@ -6,6 +6,7 @@ import Album from './Album'
 
 
 export default function AlbumCategory({data}) {
+  
   return (
     <View  style={styles.container}> 
       <Text style={styles.title}>{data.title}</Text>
