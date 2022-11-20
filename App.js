@@ -17,6 +17,7 @@ import RegisterScreen from './app/screens/RegisterScreen';
 import AuthNavigator from './navigation/AuthNavigator';
 import ActivityIndicator from './app/components/ActivityIndicator';
 import AppNavigator from './navigation/AppNavigator';
+import PlayerWidget from './app/components/PlayerWidget';
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -40,6 +41,7 @@ export default function App() {
             <Stack.Screen name="WelcomeScreen" component={AuthNavigator} />
           </Stack.Navigator> */}
           <AppNavigator />
+          {/* <PlayerWidget/> */}
           
         </NavigationContainer>
       
