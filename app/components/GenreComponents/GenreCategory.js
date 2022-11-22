@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, FlatList } from 'react-native'
 import React from 'react'
 import AlbumGenre from './AlbumGenre'
-import colors from '../config/colors';
+import colors from '../../config/colors';
 
  function GenreCategory({data}) {
    

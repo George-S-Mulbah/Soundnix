@@ -7,8 +7,8 @@ import {
 import React, { useEffect } from 'react'
 import Screen from '../components/Screen'
 import { useRoute } from '@react-navigation/native'
-import SongListItems from '../components/SongListItems'
-import AlbumHeader from '../components/AlbumHeader'
+import SongListItems from '../components/AlbumScreenComponents/SongListItems'
+import AlbumHeader from '../components/AlbumScreenComponents/AlbumHeader'
 
 export default function AlbumScreen() {
 

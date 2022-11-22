@@ -2,7 +2,7 @@ import { FlatList, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import SearchInput from '../components/SearchInput'
 import Screen from '../components/Screen'
-import GenreCategory from '../components/GenreCategory'
+import GenreCategory from '../components/GenreComponents/GenreCategory'
 
 const acdata=[{
   id: '1',

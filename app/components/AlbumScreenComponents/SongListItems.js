@@ -1,22 +1,14 @@
 import { View, Text , StyleSheet,Image, TouchableWithoutFeedback } from 'react-native'
 import React from 'react'
-import colors from '../config/colors'
+import colors from '../../config/colors'
 import { useNavigation } from '@react-navigation/native'
-import Icon from './Icon'
+import Icon from '../Icon'
 
-const data ={
-   id:'4',
-   imageUri:'https://cdn6.f-cdn.com/contestentries/1485199/27006121/5ca3e39ced7f1_thumb900.jpg',
-   title: 'Hello from the other side',
-   artist:'50 cents',
-   numberOfLike:23,
-   status: 'BUY',
-   price: `$20`,
- }
+
 
 
  
- function SongListItems() {
+ function SongListItems({data}) {
 
   return (
 

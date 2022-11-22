@@ -1,6 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity, View ,Image, ImageBackground} from 'react-native'
 import React from 'react'
-import colors from '../config/colors';
+import colors from '../../config/colors';
 
 
 
@@ -12,7 +12,7 @@ import colors from '../config/colors';
 
       <ImageBackground source={{uri:songGenre.imageUri}} resizeMode="cover" 
       style={styles.image}
-      imageStyle={{borderRadius:6,opacity:0.6}}
+      imageStyle={{borderRadius:6,opacity:1}}
       >
       <Text style={styles.genreName}>{songGenre.name}</Text>
       <View></View>
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
 genreName :{
 padding:10,
 fontSize:20,
-color: colors.dark,
+color: colors.white,
 fontWeight:"bold",
 textShadowColor:colors.dark
 },
