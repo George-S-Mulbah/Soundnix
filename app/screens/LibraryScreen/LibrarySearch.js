@@ -1,15 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View , FlatList } from 'react-native'
 import React from 'react'
 import Screen from '../../components/Screen'
 import colors from '../../config/colors';
 import SearchInput from '../../components/SearchInput';
-import RecentDownloads from '../../components/LibraryScreenComponent/RecentDownloads';
+
 import AlbumCategory from '../../components/AlbumCategory';
 
 
-const data=[{
+const acdata=[{
   id: '1',
-  title: 'Happy Vibes',
+  title: 'Recent Download',
   albums: [
     {
       id: '1',
@@ -30,6 +30,11 @@ const data=[{
       imageUri: 'https://i.pinimg.com/originals/a2/0d/37/a20d37791f8ad5cd54734cd3af559cc9.jpg',
       artistsHeadline: 'Bob Marley, Cardi B, Stas Mihailov'
     },
+    {
+      id: '5',
+      imageUri: 'https://i.pinimg.com/originals/a2/0d/37/a20d37791f8ad5cd54734cd3af559cc9.jpg',
+      artistsHeadline: 'Bob Marley, Cardi B, Stas Mihailov'
+    },
   ]
 }]
 function LibrarySearch() {
@@ -37,7 +42,11 @@ function LibrarySearch() {
     <Screen>
     <Text style={styles.pageTitle}>Library Screen</Text>
     <SearchInput br={12} m={5} width="94%" icon="magnify" />
-    <AlbumCategory data={data} />
+    <FlatList 
+     data={acdata}
+     renderItem={({item})  => <AlbumCategory data={item}/> }
+     keyExtractor={(item) => item.id}
+     />
     </Screen>
   )
 }
