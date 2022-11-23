@@ -4,9 +4,9 @@ import Icon from "../app/components/Icon";
 import colors from "../app/config/colors";
 import AccountScreen from "../app/screens/AccountScreen";
 import HomeScreen from "../app/screens/HomeScreen";
-import LibraryScreen from '../app/screens/LibraryScreen';
 import SearchScreen from './../app/screens/SearchScreen'
 import AlbumScreen from './../app/screens/AlbumScreen';
+import LibraryNavigator from "./LibraryNavigation";
 
 
 const Tab = createBottomTabNavigator();
@@ -50,7 +50,7 @@ const AppNavigator = () => (
                  
             />
             <Tab.Screen name="Library"   
-              component={LibraryScreen} 
+              component={LibraryNavigator} 
               options = {{
                   tabBarIcon:({color}) =>
                   <Icon name="music-box-multiple" size={IconSize.size} iconColor={colors.white}/>

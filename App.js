@@ -18,6 +18,8 @@ import AuthNavigator from './navigation/AuthNavigator';
 import ActivityIndicator from './app/components/ActivityIndicator';
 import AppNavigator from './navigation/AppNavigator';
 import PlayerWidget from './app/components/PlayerWidget';
+import LibraryNavigator from './navigation/LibraryNavigation';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -40,7 +42,11 @@ export default function App() {
             )}
             <Stack.Screen name="WelcomeScreen" component={AuthNavigator} />
           </Stack.Navigator> */}
-          <AppNavigator />
+         
+
+          {/* <LibraryNavigator /> */}
+          <AppNavigator/>
+         
           {/* <PlayerWidget/> */}
           
         </NavigationContainer>
