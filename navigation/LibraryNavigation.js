@@ -47,7 +47,7 @@ function LibraryNavigator(){
 
       <Tab.Screen
         name="Upload"
-        component={LibraryUploadScreen}
+        component={LibraryUploadScreenNavigator}
         options={{
           title: ({ color, focused }) => (
             <Ionicons
@@ -106,5 +106,40 @@ function LibraryScreenNavigator() {
             </LibraryStack.Navigator>
           );
         }
+
+
+
+  const LibraryUploadScreenStack = createStackNavigator();
+
+  function LibraryUploadScreenNavigator(){
+    return (
+     <LibraryUploadScreenStack.Navigator 
+     screenOptions={{
+      headerStyle:{
+        backgroundColor: colors.dark,
+       
+  },
+  headerTitleStyle:{
+    color:colors.light,
+    fontWeight:"bold",
+    marginTop:-10
+  },
+  headerBackTitleStyle:{
+    color:colors.white
+  },
+  headerTintColor: colors.white
+  
+    }}
+     >
+
+      <LibraryUploadScreenStack.Screen
+       name="LibraryUploadScreen"
+       component={LibraryUploadScreen}
+       options={{ headerTitle: 'Add a Playlist',}}
+      />
+
+     </LibraryUploadScreenStack.Navigator>
+    )
+  }
 
 const styles = StyleSheet.create({})
