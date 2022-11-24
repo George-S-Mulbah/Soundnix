@@ -100,7 +100,7 @@ function LibrarySearch() {
   return (
     <Screen>
     {/* <Text style={styles.pageTitle}>Library Screen</Text> */}
-    <SearchInput br={12} m={5} width="94%" icon="magnify" />
+    <SearchInput br={6} m={4} width="94%" icon="magnify" />
     <FlatList 
      data={acdata}
      renderItem={({item})  => <AlbumCategory data={item}/> }

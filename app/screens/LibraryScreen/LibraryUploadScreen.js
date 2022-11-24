@@ -5,6 +5,7 @@ import AppButton from '../../components/AppButton'
 
 import colors from '../../config/colors'
 import LibraryButton from '../../components/LibraryScreenComponent/LibraryButton'
+import SearchInput from '../../components/SearchInput'
 
 export default function LibraryUploadScreen() {
   return (
@@ -21,6 +22,8 @@ export default function LibraryUploadScreen() {
           title='Album' 
           textColor='white' borderColor='white'/>
         </View>
+
+        <SearchInput br={6} m={4} width="92%" icon="magnify"/>
 
       </View>
         

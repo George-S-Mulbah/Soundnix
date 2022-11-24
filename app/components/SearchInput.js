@@ -12,13 +12,13 @@ function SearchInput({ icon,width="100%",pass,padding ,br,m, eyes=false, ...othe
         { width },
         {padding},
          {borderRadius:br,margin:m},
-        {backgroundColor:colors.black},{borderColor:colors.brandColor,borderWidth:0.2}]}>
-             <MaterialCommunityIcons
+        {backgroundColor:colors.primary},{borderColor:colors.brandColor,borderWidth:0.2}]}>
+             {/* <MaterialCommunityIcons
           name="close"
           size={25}
           color={defaultStyles.colors.brandColor}
           style={styles.icon}
-        />
+        /> */}
             <TextInput
             placeholderTextColor={defaultStyles.colors.medium}
             style={[defaultStyles.text,styles.AppTextInputStyle]}
@@ -26,13 +26,13 @@ function SearchInput({ icon,width="100%",pass,padding ,br,m, eyes=false, ...othe
             {...otherProps}    
             placeholder="Search More"  
           />
-          <View style={{paddingRight:25}}>
+          <View style={{marginRight:10}}>
      <TouchableOpacity>
 
       <MaterialCommunityIcons
           name={icon}
-          size={25}
-          color={defaultStyles.colors.brandColor}
+          size={20}
+          color={defaultStyles.colors.black}
           style={styles.icon}
         />
      </TouchableOpacity>
@@ -44,22 +44,24 @@ export default SearchInput;
 const styles = StyleSheet.create({
     container: {
         backgroundColor: defaultStyles.colors.light,
-        borderRadius: 25,
+        borderRadius: 6,
         flexDirection: "row",
         padding: 20,
         marginVertical: 10,
         elevation: 10,
-        height:45,
+        height:38,
+        justifyContent:"space-between"
+        
         
       },
     
       AppTextInputStyle :{
          width:"80%",
-         color:colors.light,
+         color:colors.black,
+         fontSize:16,
       },
       icon: {
         marginRight: 0,
         paddingVertical: 10,
-        paddingLeft:5,
       },   
 })
