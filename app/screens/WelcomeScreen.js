@@ -6,8 +6,11 @@ import {
   Image,
 
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import routes from '../../navigation/routes';
 import AppButton from '../components/AppButton';
+import Constants from "expo-constants";
+
 import Screen from '../components/Screen';
 
 import colors from "../config/colors";
@@ -15,8 +18,9 @@ import colors from "../config/colors";
 function WelcomeScreen({navigation}) {
   return (
     
-    <Screen style={styles.container}>
-      
+   
+      <SafeAreaView style={styles.screen}>
+        <View style={styles.container}>
       <Image
               style={styles.logo}
               source={require('../assets/welcome.png')}
@@ -26,20 +30,30 @@ function WelcomeScreen({navigation}) {
         <AppButton title="Login" 
         color="black" 
         textColor="primary" 
-        onPress={()=>navigation.navigate(routes.REGISTER)}
+        onPress={()=>navigation.navigate(routes.LOGIN)}
         elevation={10}
          />
-        <AppButton title="Register" color="transparent" textColor="black" borderColor="black" onPress={()=>navigation.navigate(routes.LOGIN)}/>
+        <AppButton title="Register" color="transparent" textColor="black" borderColor="black" onPress={()=>navigation.navigate(routes.REGISTER)} />
       </View>
-      </Screen>
+        </View>
+      </SafeAreaView>
+      
 
   );
 }
 
 const styles = StyleSheet.create({
 
+  screen: {
+    paddingTop: Constants.statusBarHeight,
+     flex: 1,
+    backgroundColor:colors.primary
+  },
+
   container: {
    padding:5, 
+   backgroundColor:colors.primary,
+   flex:1,
   },
   background: {
     flex: 1,

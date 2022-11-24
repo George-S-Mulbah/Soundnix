@@ -154,6 +154,7 @@ createUserWithEmailAndPassword(auth, email, password)
       textColor="white" 
       elevation={10} 
       borderColor="green"
+    
       onPress={()=>setModalVisible(false)}/>
     </View>
     </Modal>

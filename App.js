@@ -20,6 +20,7 @@ import AppNavigator from './navigation/AppNavigator';
 import PlayerWidget from './app/components/PlayerWidget';
 import LibraryNavigator from './navigation/LibraryNavigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import LibraryButton from './app/components/LibraryScreenComponent/LibraryButton';
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -44,18 +45,23 @@ export default function App() {
           </Stack.Navigator> */}
          
 
-          {/* <LibraryNavigator /> */}
-          <AppNavigator/>
+          <LibraryNavigator />
+          {/* <AppNavigator/> */}
+
+           {/* <AuthNavigator/> */}
          
           {/* <PlayerWidget/> */}
           
         </NavigationContainer>
+
+        // //  <WelcomeScreen />
       
 
       // <Screen>
-      //   <ActivityIndicator
+      //   {/* <ActivityIndicator
       //     visible ={true}
-      //   />
+      //   /> */}
+      //   <LibraryButton />
       // </Screen>
 
       // <LoginScreen/>

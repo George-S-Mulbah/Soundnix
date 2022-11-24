@@ -135,7 +135,7 @@ function LibraryScreenNavigator() {
       <LibraryUploadScreenStack.Screen
        name="LibraryUploadScreen"
        component={LibraryUploadScreen}
-       options={{ headerTitle: 'Add a Playlist',}}
+       options={{ headerTitle: 'Create Your Own',}}
       />
 
      </LibraryUploadScreenStack.Navigator>
