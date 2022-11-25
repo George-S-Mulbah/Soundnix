@@ -45,8 +45,8 @@ export default function App() {
           </Stack.Navigator> */}
          
 
-          <LibraryNavigator />
-          {/* <AppNavigator/> */}
+          {/* <LibraryNavigator /> */}
+          <AppNavigator/>
 
            {/* <AuthNavigator/> */}
          

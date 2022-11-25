@@ -7,6 +7,7 @@ import HomeScreen from "../app/screens/HomeScreen";
 import SearchScreen from './../app/screens/SearchScreen'
 import AlbumScreen from './../app/screens/AlbumScreen';
 import LibraryNavigator from "./LibraryNavigation";
+import AccountNavigator from "./AccountNavigator";
 
 
 const Tab = createBottomTabNavigator();
@@ -21,6 +22,7 @@ const AppNavigator = () => (
             headerStyle:{
                   backgroundColor: colors.primary,
             },
+            tabBarHideOnKeyboard:true,
             headerTitleAlign: 'center',
             headerShown:false,
             tabBarActiveTintColor: colors.dark,
@@ -57,7 +59,7 @@ const AppNavigator = () => (
             }}
             />
             <Tab.Screen name="Account"   
-             component={AccountScreen} 
+             component={AccountNavigator} 
              options = {{
                   tabBarIcon:({color}) =>
                   <Icon name="account" size={IconSize.size} iconColor={colors.white}/>
