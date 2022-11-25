@@ -71,6 +71,8 @@ const album ={
 
     const route = useRoute()
 
+
+    //One Console.log
     useEffect(()=>{
         console.log(route);
     })

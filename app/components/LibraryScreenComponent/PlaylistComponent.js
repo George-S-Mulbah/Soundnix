@@ -1,4 +1,4 @@
-import { View, Text , StyleSheet,Image, TouchableWithoutFeedback } from 'react-native'
+import { View, Text , StyleSheet,Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import colors from '../../config/colors'
 import { useNavigation } from '@react-navigation/native'
@@ -7,12 +7,15 @@ import Icon from '../../components/Icon'
 
 
 
+
  
  function PlaylistComponent({data}) {
 
   return (
+    
 
-     
+    <TouchableOpacity>
+
     <View style={styles.container}>
         <>
 
@@ -34,10 +37,11 @@ import Icon from '../../components/Icon'
         <Icon m={false}  name="caretright" size={35} backgroundColor={colors.dark} iconColor={colors.white} />
         </View> */}
         <View style={styles.lastContainer}>
-       <Icon name="dots-vertical" backgroundColor={colors.dark} size={50} />  
+       <Icon name="dots-vertical" backgroundColor={colors.dark} size={60} />  
         </View>
         </>
     </View>
+    </TouchableOpacity>
        
     
   )

@@ -4,6 +4,7 @@ import colors from '../config/colors';
 import Screen from '../components/Screen';
 import Album from '../components/Album';
 import AlbumCategory from '../components/AlbumCategory';
+import SearchInput from '../components/SearchInput';
 
   const acdata=[{
     id: '1',
@@ -91,6 +92,10 @@ import AlbumCategory from '../components/AlbumCategory';
  function HomeScreen() {
   return (
     <Screen style={styles.container}>
+      <View  style={styles.viewContainer}>
+
+        <SearchInput br={6} m={10} width="92%" icon="magnify" />
+      </View>
      {/* <Album {...album}/> */}
      <FlatList 
      data={acdata}
@@ -104,11 +109,18 @@ import AlbumCategory from '../components/AlbumCategory';
 
 const styles = StyleSheet.create({
   container:{
-    backgroundColor:colors.black,
-    flex:1,
-    alignItems:"center",
-    justifyContent:"center",
+    // backgroundColor:colors.black,
+    // flex:1,
+    // alignItems:"center",
+    // justifyContent:"center",
+  },
+
+  viewContainer:{
+    marginRight:4,
+    marginLeft:4,
   }
+
+ 
 })
 
 

@@ -1,5 +1,5 @@
 import React,{useState}from 'react';
-import { View, TextInput, StyleSheet, TouchableOpacity, } from "react-native";
+import { View, TextInput, StyleSheet, TouchableOpacity, KeyboardAvoidingView, } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import defaultStyles from "../config/styles"
 import colors from '../config/colors';
@@ -7,7 +7,9 @@ import colors from '../config/colors';
 
 function SearchInput({ icon,width="100%",pass,padding ,br,m, eyes=false, ...otherProps }) {
   return (
-    
+    <KeyboardAvoidingView>
+
+
     <View style={[styles.container, 
         { width },
         {padding},
@@ -38,6 +40,7 @@ function SearchInput({ icon,width="100%",pass,padding ,br,m, eyes=false, ...othe
      </TouchableOpacity>
         </View>
     </View>
+    </KeyboardAvoidingView>
   )
 }
 export default SearchInput;
@@ -50,7 +53,7 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         elevation: 10,
         height:38,
-        justifyContent:"space-between"
+        justifyContent:"space-between",
         
         
       },
