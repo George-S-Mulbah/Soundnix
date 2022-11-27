@@ -78,7 +78,10 @@ function HomeNavigator() {
               <HomeStack.Screen
                 name="HomeScreen"
                 component={HomeScreen}
-                options={{ headerTitle: 'Home' }}
+                options={{
+                   headerTitle: 'Home',
+                   headerShown:false,
+               }}
               />
         
               <HomeStack.Screen

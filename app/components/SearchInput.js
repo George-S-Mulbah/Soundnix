@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
       },
     
       AppTextInputStyle :{
-         width:"80%",
+         width:"86%",
          color:colors.black,
          fontSize:16,
       },

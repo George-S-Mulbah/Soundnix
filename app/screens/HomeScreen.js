@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View,FlatList } from 'react-native'
+import { StyleSheet, Text, View,FlatList, Image, SafeAreaView } from 'react-native'
 import React from 'react'
 import colors from '../config/colors';
 import Screen from '../components/Screen';
 import Album from '../components/Album';
 import AlbumCategory from '../components/AlbumCategory';
 import SearchInput from '../components/SearchInput';
+import ListItemSeperator from '../components/ListItemSeperator';
 
   const acdata=[{
     id: '1',
@@ -91,11 +92,16 @@ import SearchInput from '../components/SearchInput';
   ]
  function HomeScreen() {
   return (
-    <Screen style={styles.container}>
+  <>
+      <SafeAreaView  style={styles.bottomSafe}>
       <View  style={styles.viewContainer}>
-
-        <SearchInput br={6} m={10} width="92%" icon="magnify" />
+        <View  style={styles.topViewContainer}>
+        <Image   style={styles.logo}  source={require('../assets/symbol.png')}/>
+        <SearchInput br={6} m={4} width="85%" icon="magnify" />
+        </View>
       </View>
+      </SafeAreaView>
+    <Screen style={styles.container}>
      {/* <Album {...album}/> */}
      <FlatList 
      data={acdata}
@@ -104,11 +110,13 @@ import SearchInput from '../components/SearchInput';
      />
      {/* <AlbumCategory data={data}/> */}
     </Screen>
+  </>
   )
 }
 
 const styles = StyleSheet.create({
   container:{
+    marginTop:-30,
     // backgroundColor:colors.black,
     // flex:1,
     // alignItems:"center",
@@ -116,9 +124,28 @@ const styles = StyleSheet.create({
   },
 
   viewContainer:{
-    marginRight:4,
-    marginLeft:4,
-  }
+    backgroundColor:colors.white,
+    flexDirection:"row",
+    height:85,
+
+  },
+
+  logo:{
+    marginTop:10,
+   width:45,
+   height:40,
+   resizeMode: 'contain'
+  },
+
+ topViewContainer:{
+  marginTop:30,
+  flexDirection:"row",
+ },
+
+ bottomSafe:{
+  marginBottom:30,
+ }
+
 
  
 })
