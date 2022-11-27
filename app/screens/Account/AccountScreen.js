@@ -1,16 +1,23 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import Screen from '../components/Screen'
-import ListItem from '../components/AccountScreenComponent.js/ListItem'
-import Icon from '../components/Icon'
-import ListItemSeparator from '../components/ListItemSeperator'
+import Screen from '../../components/Screen'
+import ListItem from '../../components/AccountScreenComponent.js/ListItem'
+import Icon from '../../components/Icon'
+import ListItemSeparator from '../../components/ListItemSeperator'
+import { useNavigation } from '@react-navigation/native'
+import routes from '../../../navigation/routes'
 
 export default function AccountScreen() {
+  const navigation = useNavigation();
+
+  const movetoProfileScreen=()=>{
+    return navigation.navigate(routes.PROFILE)
+  }
   return (
     <Screen>
       <View  style={styles.container}>
       <ListItem  
-      onPress={()=>console.log("")}
+      onPress={movetoProfileScreen}
       IconComponent={<Icon name="account"/>} 
       title="George S Mulbah" 
       subTitle="gsmulbah2500@gmail.com"

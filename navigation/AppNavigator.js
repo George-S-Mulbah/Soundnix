@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import Icon from "../app/components/Icon";
 import colors from "../app/config/colors";
-import AccountScreen from "../app/screens/AccountScreen";
+import AccountScreen from "../app/screens/Account/AccountScreen";
 import HomeScreen from "../app/screens/HomeScreen";
 import SearchScreen from './../app/screens/SearchScreen'
 import AlbumScreen from './../app/screens/AlbumScreen';

@@ -2,7 +2,7 @@ import { View, Text , StyleSheet,Image, TouchableWithoutFeedback } from 'react-n
 import React from 'react'
 import colors from '../config/colors'
 import { useNavigation } from '@react-navigation/native'
-
+import routes from '../../navigation/routes'
 
 
  
@@ -10,7 +10,7 @@ import { useNavigation } from '@react-navigation/native'
   const navigation = useNavigation();
   
    const onPress = () => {
-     navigation.navigate('AlbumScreen',{id:albumData.id});
+     navigation.navigate(routes.AlBUM_SCREEN,{id:albumData.id});
     console.log(albumData.id);
    }
  

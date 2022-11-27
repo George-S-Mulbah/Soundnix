@@ -6,5 +6,7 @@ export default Object.freeze({
     REGISTER: "Register",
     HOME : "Home",
     SEARCH:"Search",
-    LIBRARY:"Library"
+    LIBRARY:"Library",
+    PROFILE: "Profile",
+    AlBUM_SCREEN:"AlbumScreen"
   });
